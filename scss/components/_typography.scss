@@ -6,7 +6,7 @@
   }
 
   &-photo {
-    @include flex($dir: row);
+    @include flex($dir: column);
     @each $screen in $screen-types {
       $num: map-get($num-photos-per-row, $screen);
       $width: calc((100% - #{($num - 1) * $photo-gutter}) / #{$num});

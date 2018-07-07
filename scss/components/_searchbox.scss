@@ -2,16 +2,20 @@
   text-align: center;
   background-color: rgba($color-searchbox-bg, 0.75);
   border: 3px solid rgba($color-searchbox-bd, 0.5);
+  box-shadow: inset 2px 2px 2px darken($color-searchbox-bd, 10%),
+              2px 2px 2px darken($color-searchbox-bd, 10%);
   color: rgba($color-txt-primary, 0.5);
   border-radius: 10px;
   font-family: $font-family;
   font-size: $font-size-secondary;
-  transition: font-size 0.3s ease,
-              background-color, 0.4s, linear,
-              border-color, 0.4s, linear,
-              color, 0.2s ease;
+  text-shadow: 1px 1px 1px $color-txt-shadow,
+               2px 2px 1px $color-txt-shadow;
+  caret-color: lighten($color-txt-primary, 10%);
+  transition-property: font-size, background-color, border-color, color;
+  transition-duration: $transition-time;
+  transition-timing-function: linear;
   &::placeholder {
-    color: rgba(white, 0.5);
+    color: rgba($color-txt-secondary, 0.5);
     font-family: $font-family;
     font-size: $font-size-secondary;
   }

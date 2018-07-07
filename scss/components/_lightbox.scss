@@ -1,0 +1,34 @@
+.sl {
+  &bOverlay {
+    background-color: $color-bg-lightbox;
+    opacity: 0.95;
+  }
+
+  &bImage {
+
+  }
+
+  &bCaption {
+
+  }
+
+  &bArrow {
+    transition: background-color 0.3s linear;
+    &[class^="prev"]::before {
+      border-right-color: $color-btn;
+    }
+    &[class^="next"]::before {
+      border-left-color: $color-btn;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &bCloseBtn {
+    color: $color-btn;
+    &:focus {
+      outline: none;
+    }
+  }
+}

@@ -11,25 +11,27 @@ $num-photos-per-row: (
 );
 $height-searchbox-container: 100px;
 $height-searchbox: 40px;
-$photo-gutter: 25px;
+$photo-gutter: 40px;
 
 // Fonts:
 $font-family: 'Roboto Slab', sans-serif;
-$font-size-primary: 25px;
-$font-size-secondary: 20px;
+$font-size-primary: 30px;
+$font-size-secondary: 25px;
 
 // Colors
-$color-bg-primary: #e6f2ff;
-$color-bg-lightbox: #c9f;
-$color-searchbox-bg: #ffb3b3;
-$color-searchbox-bd: #ff66d9;
-$color-txt-primary: #c0c;
-$color-txt-secondary: #f3f;
-$color-photo-bg-primary: #e0b3ff;
-$color-photo-bg-lightbox: #ccffb3;
+$bg-primary: url("../images/wall.jpg");
+$color-bg-lightbox: black;
+$color-searchbox-bg: #c2d6d6;
+$color-searchbox-bd: #b8b894;
+$color-txt-primary: #33c;
+$color-txt-secondary: #5c5cd6;
+$color-txt-shadow: grey;
+$color-photo-frame-primary: grey;
+$color-photo-frame-lightbox: #ccffb3;
+$color-btn: white;
 
 // Animation
-$transition-time: 750;
+$transition-time: 750ms;
 
 // Breakpoints
 $screen-types: ('sm', 'md', 'lg');
@@ -38,3 +40,6 @@ $breakpoints: (
   'md': 768px,
   'lg': 1024px
 )
+
+// Lightbox
+// $photo-lb-size:

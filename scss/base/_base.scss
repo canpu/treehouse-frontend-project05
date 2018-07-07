@@ -1,11 +1,13 @@
 body {
-  background-color: $color-bg-primary;
   @include flex($dir: column);
+  background-image: $bg-primary;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 hr {
   width: 100%;
   margin-bottom: $photo-gutter;
   color: #80ffcc;
-  border: 3px solid rgba(darken($color-bg-primary, 25%), 0.5);
+  // border: 3px solid rgba(darken($color-bg-primary, 25%), 0.5);
 }
