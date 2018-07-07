@@ -1,47 +1,31 @@
-/* Flexbox */
-@mixin flexy($disp: flex, $dir: null, $wrap: null, $just: null,
-  $align-coaxis: null) {
-  display: $disp;
-  flex-direction: $dir;
-  flex-wrap: $wrap;
-  justify-content: $just;
-  align-items: $align-coaxis;
-}
-
-/* Media Query */
-@mixin mq($screen-type) {
-  @if $screen-type != 'mobile' and $screen-type != 'desktop' {
-    @error "#{$screen-type} is not supported by media queries.";
-  }
-  $screen-size: map-get($breakpoints, $screen-type);
-  $mobile-size: map-get($breakpoints, 'mobile');
-  @if $screen-size == $mobile-size {
-    @media(max-width: $mobile-size) {
+@mixin media($screen-description) {
+  @if $screen-description == 'sm' {
+    @media (max-width: map-get($breakpoints, $screen-description)) {
       @content;
     }
   }
   @else {
-    @media(min-width: $screen-size) {
+    @media (min-width: map-get($breakpoints, $screen-description)) {
       @content;
     }
   }
 }
 
-/* Centered */
-@mixin centered() {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* BEM */
-@mixin element($element) {
-  &__#{$element} {
-    @content;
+@mixin media-forall($property, $values) {
+  #{$property}: #{map-get($values, 'sm')};
+  @each $screen, $value in $values {
+    @if $screen != 'sm' {
+      @include media($screen) {
+        #{$property}: #{$value};
+      }
+    }
   }
 }
 
-@mixin modifier($modifier) {
-  &--#{$modifier} {
-    @content;
-  }
+@mixin flex($dir: row, $just: space-between, $align: center, $wrap: wrap) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $just;
+  align-items: $align;
+  flex-wrap: $wrap;
 }

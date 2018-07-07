@@ -1,1 +1,37 @@
+.container {
+  &-main {
+    @include flex($dir: column);
+    @include media-forall('width', $width-of-page);
 
+  }
+
+  &-photo {
+    @include flex($dir: row);
+    @each $screen in $screen-types {
+      $num: map-get($num-photos-per-row, $screen);
+      $width: calc((100% - #{($num - 1) * $photo-gutter}) / #{$num});
+      @if $screen == 'sm' {
+        width: $width;
+      } @else {
+        @include media($screen) {
+          width: $width;
+        }
+      }
+    }
+  }
+
+  &-photos {
+    @include flex($dir: row);
+  }
+
+  &-searchbox {
+    @include flex($dir: column, $just: center);
+    width: 50%;
+    min-width: 300px;
+    height: $height-searchbox-container;
+    & > .searchbox {
+      width: 100%;
+      height: $height-searchbox;
+    }
+  }
+}

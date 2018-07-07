@@ -1,0 +1,9 @@
+.image {
+  &-thumbnail {
+    @extend %image;
+    margin-bottom: $photo-gutter;
+  }
+  &-photo {
+
+  }
+}

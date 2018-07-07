@@ -1,0 +1,25 @@
+.searchbox {
+  text-align: center;
+  background-color: rgba($color-searchbox-bg, 0.75);
+  border: 3px solid rgba($color-searchbox-bd, 0.5);
+  color: rgba($color-txt-primary, 0.5);
+  border-radius: 10px;
+  font-family: $font-family;
+  font-size: $font-size-secondary;
+  transition: font-size 0.3s ease,
+              background-color, 0.4s, linear,
+              border-color, 0.4s, linear,
+              color, 0.2s ease;
+  &::placeholder {
+    color: rgba(white, 0.5);
+    font-family: $font-family;
+    font-size: $font-size-secondary;
+  }
+  &:focus {
+    outline: none;
+    background-color: $color-searchbox-bg;
+    color: $color-txt-primary;
+    font-size: $font-size-primary;
+    border-color: $color-searchbox-bd;
+  }
+}
