@@ -7,7 +7,7 @@ $('.imageGallery1 a').simpleLightbox({
 });
 
 // Original Searchbox JS
-const $images = $(".image-thumbnail")
+const $images = $(".image-thumbnail");
 const $containers = $(".container-photo");
 const anitime = 150;
 

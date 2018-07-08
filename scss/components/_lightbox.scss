@@ -28,7 +28,7 @@
     // }
     &Wrap {
       height: 99.9vh;
-      @include flex($dir: column, $just: center, $wrap: no-wrap);
+      @include flex($dir: column, $just: center, $wrap: nowrap);
       width: 80vw;
       @include media('md') {
         width: 70vw;
