@@ -743,6 +743,7 @@ hr {
   align-items: center;
   flex-wrap: wrap;
   width: calc((100% - 0px) / 1);
+  max-width: 250px;
 }
 
 @media (min-width: 768px) {
@@ -759,7 +760,7 @@ hr {
   }
 }
 
-/* line 23, F:/Github/treehouse-frontend-project05/scss/components/_typography.scss */
+/* line 24, F:/Github/treehouse-frontend-project05/scss/components/_typography.scss */
 .container-photos {
   display: flex;
   flex-direction: row;
@@ -768,7 +769,7 @@ hr {
   flex-wrap: wrap;
 }
 
-/* line 27, F:/Github/treehouse-frontend-project05/scss/components/_typography.scss */
+/* line 28, F:/Github/treehouse-frontend-project05/scss/components/_typography.scss */
 .container-searchbox {
   display: flex;
   flex-direction: column;
@@ -780,17 +781,106 @@ hr {
   height: 100px;
 }
 
-/* line 32, F:/Github/treehouse-frontend-project05/scss/components/_typography.scss */
+/* line 33, F:/Github/treehouse-frontend-project05/scss/components/_typography.scss */
 .container-searchbox > .searchbox {
   width: 100%;
   height: 40px;
 }
 
 /* line 2, F:/Github/treehouse-frontend-project05/scss/components/_photos.scss */
+.image-cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 75%;
+  height: 75%;
+  font-size: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition-property: width, height, background-color, opacity;
+  transition-duration: 0.25s, 0.25s, 750ms;
+  transition-timing-function: linear;
+}
+
+/* line 15, F:/Github/treehouse-frontend-project05/scss/components/_photos.scss */
 .image-thumbnail {
-  margin-bottom: 40px;
+  margin: auto;
+  transition-property: opacity;
+  transition-duration: 750ms;
+  transition-timing-function: linear;
+}
+
+/* line 22, F:/Github/treehouse-frontend-project05/scss/components/_photos.scss */
+.image-title {
+  font-size: 0;
+  color: white;
+  text-align: center;
+  font-family: "Lobster", "Roboto Slab", sans-serif;
+  margin-bottom: 20px;
+  transition-property: font-size;
+  transition-duration: 750ms;
+  transition-timing-function: linear;
+}
+
+/* line 37, F:/Github/treehouse-frontend-project05/scss/components/_photos.scss */
+.container-photo {
+  position: relative;
   box-shadow: -3px 0px 2px grey, -2px -1px 2px grey, -1px -2px 2px grey, 0px -3px 2px grey, 1px 0px 2px grey, 0px 1px 2px grey;
-  max-width: 250px;
+  margin-bottom: 40px;
+  transition-property: box-shadow;
+  transition-duration: 750ms;
+  transition-timing-function: linear;
+}
+
+/* line 49, F:/Github/treehouse-frontend-project05/scss/components/_photos.scss */
+.container-photo:hover {
+  box-shadow: 0 0 5px grey;
+}
+
+/* line 51, F:/Github/treehouse-frontend-project05/scss/components/_photos.scss */
+.container-photo:hover .image-thumbnail {
+  opacity: 0.75;
+}
+
+/* line 54, F:/Github/treehouse-frontend-project05/scss/components/_photos.scss */
+.container-photo:hover .image-cover {
+  background-color: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+/* line 59, F:/Github/treehouse-frontend-project05/scss/components/_photos.scss */
+.container-photo:hover .image-cover .image-title {
+  font-size: 30px;
+}
+
+/* line 66, F:/Github/treehouse-frontend-project05/scss/components/_photos.scss */
+.icon-zoom {
+  width: 10px;
+  height: 10px;
+  fill: white;
+  transition-property: width, height;
+  transition-duration: 750ms;
+  transition-timing-function: linear;
+}
+
+/* line 73, F:/Github/treehouse-frontend-project05/scss/components/_photos.scss */
+.container-photo:hover .icon-zoom {
+  width: 30px;
+  height: 30px;
 }
 
 /* line 1, F:/Github/treehouse-frontend-project05/scss/components/_searchbox.scss */
