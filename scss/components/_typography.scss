@@ -18,10 +18,10 @@
         }
       }
     }
-    max-width: 250px;
   }
 
   &-photos {
+    width: 100%;
     @include flex($dir: row);
   }
 

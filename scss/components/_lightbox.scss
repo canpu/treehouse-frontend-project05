@@ -1,32 +1,101 @@
-.sl {
-  &bOverlay {
+.slb {
+  &Overlay {
     background-color: $color-bg-lightbox;
-    opacity: 0.95;
+    opacity: 1;
   }
 
-  &bImage {
-
-  }
-
-  &bCaption {
-
-  }
-
-  &bArrow {
-    transition: background-color 0.3s linear;
-    &[class^="prev"]::before {
-      border-right-color: $color-btn;
+  &Image {
+    position: static;
+    width: auto;
+    height: auto;
+    background-color: white;
+    background-image: url('../images/photo-frame.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-left: $photo-frame-gutter-x;
+    padding-right: $photo-frame-gutter-x;
+    padding-top: $photo-frame-gutter-y;
+    padding-bottom: $photo-frame-gutter-y;
+    box-shadow: none;
+    max-width: 95%;
+    max-height: 76%;
+    @include media('md') {
+      max-width: 85%;
+      max-height: 68%;
     }
-    &[class^="next"]::before {
-      border-left-color: $color-btn;
+    @include media('lg') {
+      max-width: 75%;
+      max-height: 60%;
+    }
+    &Wrap {
+      height: 99.9vh;
+      @include flex($dir: column, $just: center, $wrap: no-wrap);
+      &::after {
+        background: none;
+        box-shadow: none;
+      }
+    }
+  }
+
+  &Caption {
+    display: block;
+    position: static;
+    margin-top: 0;
+    margin-bottom: 0;
+    overflow-wrap: break-word;
+    white-space: normal;
+    word-wrap: break-word;
+    text-align: center;
+    overflow: visible;
+    transition: font-size $transition-time linear,
+                font-weight $transition-time linear;
+    color: $color-txt-description;
+    font-family: $font-family-description;
+    font-size: $font-size-lightbox - 5;
+    font-weight: 100;
+    width: 80%;
+    @include media('md') {
+      font-size: $font-size-lightbox - 2.5;
+      font-weight: normal;
+      width: 70%;
+    }
+    @include media('lg') {
+      font-size: $font-size-lightbox;
+      font-weight: normal;
+      width: 60%;
+    }
+  }
+
+  &Arrows {
+    position: absolute;
+  }
+
+  &Arrow {
+    transition: background-color 0.3s linear;
+    &[class^="prev"] {
+      @include lightbox-btn-position('left');
+      &::before {
+        border-right-color: $color-btn;
+        @include lightbox-btn-size;
+      }
+    }
+    &[class^="next"] {
+      @include lightbox-btn-position('right');
+      &::before {
+        border-left-color: $color-btn;
+        @include lightbox-btn-size;
+      }
     }
     &:focus {
       outline: none;
     }
   }
 
-  &bCloseBtn {
+  &CloseBtn  {
     color: $color-btn;
+    @include lightbox-btn-size;
+    @include lightbox-btn-position('right', $val-lg: 10%, $val-md: 9%, $val-sm: 8%);
     &:focus {
       outline: none;
     }

@@ -9,33 +9,34 @@
     opacity: 0;
     overflow: hidden;
     transition-property: width, height, background-color, opacity;
-    transition-duration: 0.25s, 0.25s, $transition-time;
+    transition-duration: $transition-time / 3, $transition-time / 3, $transition-time;
     transition-timing-function: linear;
   }
   &-thumbnail {
-    @extend %image;
     margin: auto;
+    width: 100%;
     transition-property: opacity;
     transition-duration: $transition-time;
     transition-timing-function: linear;
+    background-color: white;
   }
   &-title {
     font-size: 0;
     color: $color-txt-description;
     text-align: center;
     font-family: $font-family-description;
+    overflow: hidden;
+    margin-top: 0;
     margin-bottom: 20px;
     transition-property: font-size;
     transition-duration: $transition-time;
-    transition-timing-function: linear;
-  }
-  &-photo {
-
+    transition-timing-function: ease-in;
   }
 }
 
 .container-photo {
   position: relative;
+  overflow: hidden;
   box-shadow: -3px 0px 2px $color-photo-frame-primary,
               -2px -1px 2px $color-photo-frame-primary,
               -1px -2px 2px $color-photo-frame-primary,
@@ -47,7 +48,6 @@
   transition-duration: $transition-time;
   transition-timing-function: linear;
   &:hover {
-    box-shadow: 0 0 5px $color-photo-frame-primary;
     & .image-thumbnail {
       opacity: 0.75;
     }
@@ -64,12 +64,12 @@
 }
 
 .icon-zoom {
-  width: 10px;
-  height: 10px;
+  width: 0px;
+  height: 0px;
   fill: $color-txt-description;
   transition-property: width, height;
   transition-duration: $transition-time;
-  transition-timing-function: linear;
+  transition-timing-function: ease-in;
   .container-photo:hover & {
     width: 30px;
     height: 30px;

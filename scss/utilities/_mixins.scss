@@ -45,3 +45,27 @@
     bottom: 0;
   }
 }
+
+@mixin lightbox-btn-size {
+  width: 1px;
+  height: 1px;
+  @include media('md') {
+    width: 1.5px;
+    height: 1.5px;
+  }
+  @include media('lg') {
+    width: 2px;
+    height: 2px;
+  }
+}
+
+@mixin lightbox-btn-position($pos, $val-lg: 5%, $val-md: -3%, $val-sm: -7%) {
+  position: absolute;
+  #{$pos}: $val-sm;
+  @include media('md') {
+    #{$pos}: $val-md;
+  }
+  @include media('lg') {
+    #{$pos}: $val-lg;
+  }
+}

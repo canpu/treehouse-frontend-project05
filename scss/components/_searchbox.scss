@@ -5,7 +5,7 @@
   box-shadow: inset 2px 2px 2px darken($color-searchbox-bd, 10%),
               2px 2px 2px darken($color-searchbox-bd, 10%);
   color: rgba($color-txt-primary, 0.5);
-  border-radius: 10px;
+  border-radius: $height-searchbox / 2;
   font-family: $font-family;
   font-size: $font-size-secondary;
   text-shadow: 1px 1px 1px $color-txt-shadow,

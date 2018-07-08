@@ -12,16 +12,19 @@ $num-photos-per-row: (
 $height-searchbox-container: 100px;
 $height-searchbox: 40px;
 $photo-gutter: 40px;
+$photo-frame-gutter-y: 4.5%;
+$photo-frame-gutter-x: 4.5%;
 
 // Fonts:
 $font-family: 'Roboto Slab', sans-serif;
 $font-family-description: 'Lobster', 'Roboto Slab', sans-serif;
 $font-size-primary: 30px;
 $font-size-secondary: 25px;
+$font-size-lightbox: 20px;
 
 // Colors
 $bg-primary: url("../images/wall.jpg");
-$color-bg-lightbox: black;
+$color-bg-lightbox: rgba(black, 0.9);
 $color-searchbox-bg: #c2d6d6;
 $color-searchbox-bd: #b8b894;
 $color-txt-primary: #33c;
@@ -33,14 +36,14 @@ $color-photo-frame-lightbox: #ccffb3;
 $color-btn: white;
 
 // Animation
-$transition-time: 750ms;
+$transition-time: 500ms;
 
 // Breakpoints
 $screen-types: ('sm', 'md', 'lg');
 $breakpoints: (
-  'sm': 480px,
-  'md': 768px,
-  'lg': 1024px
+  'sm': 700px,
+  'md': 850px,
+  'lg': 1000px
 )
 
 // Lightbox

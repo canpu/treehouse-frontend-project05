@@ -179,7 +179,7 @@
                 this.$currentImage = $imageCont.find('.slbImage');
 
                 if (this.options.showCaptions && this.captions[position]) {
-                    $imageCont.append('<div class="slbCaption">' + this.captions[position] + '</div>');
+                    $imageCont.append('<p class="slbCaption">' + this.captions[position] + '</p>');
                 }
 
                 this.loadImage(url, function() {
