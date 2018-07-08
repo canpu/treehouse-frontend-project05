@@ -23,4 +23,4 @@ TreeHouse FrontEnd Project 5 - Interactive Photo Gallery
 
 ## External Plugins
 
-* simplelightbox *by Damir Brekalo*
+* [simplelightbox](https://github.com/dbrekalo/simpleLightbox) *by Damir Brekalo*
