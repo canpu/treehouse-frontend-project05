@@ -59,7 +59,7 @@
   }
 }
 
-@mixin lightbox-btn-position($pos, $val-lg: 5%, $val-md: -3%, $val-sm: -7%) {
+@mixin lightbox-btn-position($pos, $val-lg: 5%, $val-md: 2.5%, $val-sm: 0%) {
   position: absolute;
   #{$pos}: $val-sm;
   @include media('md') {

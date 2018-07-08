@@ -6,6 +6,8 @@
   }
 
   &-photo {
+    max-width: 400px;
+    max-height: 400px;
     @include flex($dir: column);
     @each $screen in $screen-types {
       $num: map-get($num-photos-per-row, $screen);

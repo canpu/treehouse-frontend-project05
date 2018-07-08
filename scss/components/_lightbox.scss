@@ -18,19 +18,24 @@
     padding-top: $photo-frame-gutter-y;
     padding-bottom: $photo-frame-gutter-y;
     box-shadow: none;
-    max-width: 95%;
-    max-height: 76%;
-    @include media('md') {
-      max-width: 85%;
-      max-height: 68%;
-    }
-    @include media('lg') {
       max-width: 75%;
       max-height: 60%;
-    }
+    // @include media('md') {
+    //   max-width: 85%;
+    //   max-height: 68%;
+    // }
+    // @include media('lg') {
+    // }
     &Wrap {
       height: 99.9vh;
       @include flex($dir: column, $just: center, $wrap: no-wrap);
+      width: 80vw;
+      @include media('md') {
+        width: 70vw;
+      }
+      @include media('lg') {
+        width: 60vw;
+      }
       &::after {
         background: none;
         box-shadow: none;
@@ -95,7 +100,7 @@
   &CloseBtn  {
     color: $color-btn;
     @include lightbox-btn-size;
-    @include lightbox-btn-position('right', $val-lg: 10%, $val-md: 9%, $val-sm: 8%);
+    @include lightbox-btn-position('right', $val-lg: 10%, $val-md: 10%, $val-sm: 10%);
     &:focus {
       outline: none;
     }

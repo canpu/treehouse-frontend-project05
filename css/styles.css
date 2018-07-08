@@ -737,18 +737,20 @@ hr {
 
 /* line 8, F:/Github/treehouse-frontend-project05/scss/components/_typography.scss */
 .container-photo {
+  max-width: 400px;
+  max-height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  width: calc((100% - 0px) / 1);
+  width: calc((100% - 40px) / 2);
 }
 
 @media (min-width: 850px) {
   /* line 8, F:/Github/treehouse-frontend-project05/scss/components/_typography.scss */
   .container-photo {
-    width: calc((100% - 40px) / 2);
+    width: calc((100% - 80px) / 3);
   }
 }
 
@@ -759,7 +761,7 @@ hr {
   }
 }
 
-/* line 23, F:/Github/treehouse-frontend-project05/scss/components/_typography.scss */
+/* line 25, F:/Github/treehouse-frontend-project05/scss/components/_typography.scss */
 .container-photos {
   width: 100%;
   display: flex;
@@ -769,7 +771,7 @@ hr {
   flex-wrap: wrap;
 }
 
-/* line 28, F:/Github/treehouse-frontend-project05/scss/components/_typography.scss */
+/* line 30, F:/Github/treehouse-frontend-project05/scss/components/_typography.scss */
 .container-searchbox {
   display: flex;
   flex-direction: column;
@@ -781,7 +783,7 @@ hr {
   height: 100px;
 }
 
-/* line 33, F:/Github/treehouse-frontend-project05/scss/components/_typography.scss */
+/* line 35, F:/Github/treehouse-frontend-project05/scss/components/_typography.scss */
 .container-searchbox > .searchbox {
   width: 100%;
   height: 40px;
@@ -937,27 +939,11 @@ hr {
   padding-top: 4.5%;
   padding-bottom: 4.5%;
   box-shadow: none;
-  max-width: 95%;
-  max-height: 76%;
+  max-width: 75%;
+  max-height: 60%;
 }
 
-@media (min-width: 850px) {
-  /* line 7, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
-  .slbImage {
-    max-width: 85%;
-    max-height: 68%;
-  }
-}
-
-@media (min-width: 1000px) {
-  /* line 7, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
-  .slbImage {
-    max-width: 75%;
-    max-height: 60%;
-  }
-}
-
-/* line 31, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
+/* line 29, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
 .slbImageWrap {
   height: 99.9vh;
   display: flex;
@@ -965,15 +951,30 @@ hr {
   justify-content: center;
   align-items: center;
   flex-wrap: no-wrap;
+  width: 80vw;
 }
 
-/* line 34, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
+@media (min-width: 850px) {
+  /* line 29, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
+  .slbImageWrap {
+    width: 70vw;
+  }
+}
+
+@media (min-width: 1000px) {
+  /* line 29, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
+  .slbImageWrap {
+    width: 60vw;
+  }
+}
+
+/* line 39, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
 .slbImageWrap::after {
   background: none;
   box-shadow: none;
 }
 
-/* line 41, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
+/* line 46, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
 .slbCaption {
   display: block;
   position: static;
@@ -993,7 +994,7 @@ hr {
 }
 
 @media (min-width: 850px) {
-  /* line 41, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
+  /* line 46, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
   .slbCaption {
     font-size: 17.5px;
     font-weight: normal;
@@ -1002,7 +1003,7 @@ hr {
 }
 
 @media (min-width: 1000px) {
-  /* line 41, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
+  /* line 46, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
   .slbCaption {
     font-size: 20px;
     font-weight: normal;
@@ -1010,37 +1011,37 @@ hr {
   }
 }
 
-/* line 70, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
+/* line 75, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
 .slbArrows {
   position: absolute;
 }
 
-/* line 74, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
+/* line 79, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
 .slbArrow {
   transition: background-color 0.3s linear;
 }
 
-/* line 76, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
+/* line 81, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
 .slbArrow[class^="prev"] {
   position: absolute;
-  left: -7%;
+  left: 0%;
 }
 
 @media (min-width: 850px) {
-  /* line 76, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
+  /* line 81, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
   .slbArrow[class^="prev"] {
-    left: -3%;
+    left: 2.5%;
   }
 }
 
 @media (min-width: 1000px) {
-  /* line 76, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
+  /* line 81, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
   .slbArrow[class^="prev"] {
     left: 5%;
   }
 }
 
-/* line 78, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
+/* line 83, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
 .slbArrow[class^="prev"]::before {
   border-right-color: white;
   width: 1px;
@@ -1048,7 +1049,7 @@ hr {
 }
 
 @media (min-width: 850px) {
-  /* line 78, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
+  /* line 83, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
   .slbArrow[class^="prev"]::before {
     width: 1.5px;
     height: 1.5px;
@@ -1056,34 +1057,34 @@ hr {
 }
 
 @media (min-width: 1000px) {
-  /* line 78, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
+  /* line 83, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
   .slbArrow[class^="prev"]::before {
     width: 2px;
     height: 2px;
   }
 }
 
-/* line 83, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
+/* line 88, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
 .slbArrow[class^="next"] {
   position: absolute;
-  right: -7%;
+  right: 0%;
 }
 
 @media (min-width: 850px) {
-  /* line 83, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
+  /* line 88, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
   .slbArrow[class^="next"] {
-    right: -3%;
+    right: 2.5%;
   }
 }
 
 @media (min-width: 1000px) {
-  /* line 83, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
+  /* line 88, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
   .slbArrow[class^="next"] {
     right: 5%;
   }
 }
 
-/* line 85, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
+/* line 90, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
 .slbArrow[class^="next"]::before {
   border-left-color: white;
   width: 1px;
@@ -1091,7 +1092,7 @@ hr {
 }
 
 @media (min-width: 850px) {
-  /* line 85, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
+  /* line 90, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
   .slbArrow[class^="next"]::before {
     width: 1.5px;
     height: 1.5px;
@@ -1099,29 +1100,29 @@ hr {
 }
 
 @media (min-width: 1000px) {
-  /* line 85, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
+  /* line 90, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
   .slbArrow[class^="next"]::before {
     width: 2px;
     height: 2px;
   }
 }
 
-/* line 90, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
+/* line 95, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
 .slbArrow:focus {
   outline: none;
 }
 
-/* line 95, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
+/* line 100, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
 .slbCloseBtn {
   color: white;
   width: 1px;
   height: 1px;
   position: absolute;
-  right: 8%;
+  right: 10%;
 }
 
 @media (min-width: 850px) {
-  /* line 95, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
+  /* line 100, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
   .slbCloseBtn {
     width: 1.5px;
     height: 1.5px;
@@ -1129,7 +1130,7 @@ hr {
 }
 
 @media (min-width: 1000px) {
-  /* line 95, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
+  /* line 100, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
   .slbCloseBtn {
     width: 2px;
     height: 2px;
@@ -1137,20 +1138,20 @@ hr {
 }
 
 @media (min-width: 850px) {
-  /* line 95, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
-  .slbCloseBtn {
-    right: 9%;
-  }
-}
-
-@media (min-width: 1000px) {
-  /* line 95, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
+  /* line 100, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
   .slbCloseBtn {
     right: 10%;
   }
 }
 
-/* line 99, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
+@media (min-width: 1000px) {
+  /* line 100, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
+  .slbCloseBtn {
+    right: 10%;
+  }
+}
+
+/* line 104, F:/Github/treehouse-frontend-project05/scss/components/_lightbox.scss */
 .slbCloseBtn:focus {
   outline: none;
 }
