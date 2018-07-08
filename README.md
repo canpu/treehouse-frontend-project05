@@ -1,5 +1,5 @@
 # treehouse-frontend-project05
-TreeHouse FrontEnd Project 5 - Photo Gallery
+TreeHouse FrontEnd Project 5 - Interactive Photo Gallery
 
 [Click here](https://canpu.github.io/treehouse-frontend-project05/) to view the demo
 
