@@ -3,7 +3,7 @@ TreeHouse FrontEnd Project 5 - Photo Gallery
 
 [Click here](https://canpu.github.io/treehouse-frontend-project05/) to view the demo
 
-[](images/project05.png)
+![](images/project05.png)
 
 ## Brief Introduction
 
