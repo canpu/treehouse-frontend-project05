@@ -13,3 +13,14 @@ TreeHouse FrontEnd Project 5 - Interactive Photo Gallery
 * Clicking any photo would lead you to a lightbox, in which a magnified version is shown for the corresponding photo.
 * One can navigate through all photos in the lightbox via the previous and next button (or via the keyboard).
 
+## Techniques Involed
+
+* HTML
+* CSS
+* Sass
+* JavaScript
+* jQuery
+
+## External Plugins
+
+* simplelightbox *by Damir Brekalo*
