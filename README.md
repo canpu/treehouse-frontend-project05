@@ -3,7 +3,7 @@ TreeHouse FrontEnd Project 5 - Interactive Photo Gallery
 
 [Click here](https://canpu.github.io/treehouse-frontend-project05/) to view the demo
 
-![](images/project05.png)
+![](images/project-05.gif)
 
 ## Brief Introduction
 
